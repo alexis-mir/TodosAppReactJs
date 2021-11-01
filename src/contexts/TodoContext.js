@@ -9,6 +9,7 @@ const defaultTodos = [
   { id: 3, text: "Tomar un helado", completed: false },
   { id: 4, text: "Quitar el susbrallado rojo del codigo", completed: true },
 ];
+const defaultLastId = 4;
 
 function TodoProvider(props) {
   const {
@@ -16,6 +17,10 @@ function TodoProvider(props) {
     saveItem: saveTodos,
     error,
   } = useLocalStorage("TODOS_V1", defaultTodos);
+  const { items: lastId, saveItem: saveLastId } = useLocalStorage(
+    "LAST_ID_TODOS",
+    defaultLastId
+  );
   const [searchValue, setSearchValue] = React.useState("");
   const [openModal, setOpenModal] = React.useState(false);
 
@@ -32,6 +37,17 @@ function TodoProvider(props) {
       return todoText.includes(searchText);
     });
   }
+
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      id: lastId + 1,
+      complete: completedTodos,
+      text,
+    });
+    saveLastId(lastId + 1);
+    saveTodos(newTodos);
+  };
 
   const completeTodo = (id) => {
     const todoIndex = todos.findIndex((todo) => todo.id === id);
@@ -59,6 +75,7 @@ function TodoProvider(props) {
         deleteTodo,
         openModal,
         setOpenModal,
+        addTodo,
       }}
     >
       {props.children}
