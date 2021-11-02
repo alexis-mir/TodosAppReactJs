@@ -23,7 +23,7 @@ function AppUI() {
       <TodoSearch />
       <TodoList>
         {error && <p>error...</p>}
-        {!searchedTodos.length && <p>¡Crea tu primer TODO!</p>}
+        {!searchedTodos.length && <p align="center">¡No hay TODOs que mostrar!</p>}
 
         {searchedTodos.map((todo) => (
           <TodoItem

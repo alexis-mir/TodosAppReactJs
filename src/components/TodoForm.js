@@ -14,7 +14,9 @@ function TodoForm(props) {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
+    if(newTodoValue){
+      addTodo(newTodoValue);
+    }
     setOpenModal(false);
   };
 
@@ -25,6 +27,7 @@ function TodoForm(props) {
         value={newTodoValue}
         onChange={onChange}
         placeholder="Escribe aquí la tarea..."
+        autoFocus={true}
       />
       <div className="TodoForm-buttonContainer">
         <button

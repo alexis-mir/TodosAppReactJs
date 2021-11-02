@@ -1,4 +1,5 @@
 import React from "react";
+import {MdAdd} from 'react-icons/md';
 import "../css/CreateTodoButton.css";
 
 function CreateTodoButton(props) {
@@ -7,7 +8,7 @@ function CreateTodoButton(props) {
   };
   return (
     <button className="CreateTodoButton" onClick={onClickButton}>
-      <i className="fas fa-plus" />
+      <MdAdd />
     </button>
   );
 }
