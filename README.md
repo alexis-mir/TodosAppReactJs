@@ -1,6 +1,6 @@
 # TODO's App
 
-🚀 Deploy 🚀 -> [todo-app.alexismiranda.com.ar](https://todo-app.alexismiranda.com.ar/).
+🚀 Deployed 🚀 -> [todo-app.alexismiranda.com.ar](https://todo-app.alexismiranda.com.ar/).
 
 ## Available Scripts
 
