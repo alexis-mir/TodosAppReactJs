@@ -7,6 +7,7 @@ import { TodoItem } from "./TodoItem";
 import { CreateTodoButton } from "./CreateTodoButton";
 import { Modal } from "./Modal";
 import { TodoForm } from "./TodoForm";
+import "../css/AppUI.css";
 
 function AppUI() {
   const {
@@ -18,7 +19,7 @@ function AppUI() {
     setOpenModal,
   } = React.useContext(TodoContext);
   return (
-    <React.Fragment>
+    <section className="container">
       <TodoCounter />
       <TodoSearch />
       <TodoList>
@@ -41,7 +42,7 @@ function AppUI() {
         </Modal>
       )}
       <CreateTodoButton setOpenModal={setOpenModal} />
-    </React.Fragment>
+    </section>
   );
 }
 

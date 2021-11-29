@@ -3,9 +3,9 @@ import "../css/TodoList.css";
 
 function TodoList(props) {
   return (
-    <section>
+    <div>
       <ul>{props.children}</ul>
-    </section>
+    </div>
   );
 }
 

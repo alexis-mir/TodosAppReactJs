@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/TodoSearch.css";
 import { TodoContext } from "../contexts/TodoContext";
+import { SearchIcon } from "./icons/SearchIcon";
 
 function TodoSearch() {
   const { searchValue, setSearchValue } = React.useContext(TodoContext);
@@ -9,12 +10,18 @@ function TodoSearch() {
     setSearchValue(e.target.value);
   };
   return (
-    <input
-      className="TodoSearch"
-      placeholder="Buscar tareas..."
-      value={searchValue}
-      onChange={onSearchValueChanged}
-    />
+    <React.Fragment>
+      <label for="search" className="TodoSearch">
+        <SearchIcon />
+        <input
+          id="search"
+          className=""
+          placeholder="Buscar tareas..."
+          value={searchValue}
+          onChange={onSearchValueChanged}
+        />
+      </label>
+    </React.Fragment>
   );
 }
 

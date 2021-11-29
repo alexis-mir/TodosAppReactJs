@@ -7,6 +7,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border-radius: 20px;
 }
 
 label {
@@ -19,7 +20,7 @@ label {
 
 textarea {
   background-color: #f9fbfc;
-  border: 2px solid #202329;
+  border: 2px solid #575757;
   border-radius: 2px;
   box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
   color: #1e1e1f;
@@ -37,7 +38,7 @@ textarea::placeholder {
 }
 
 textarea:focus {
-  outline-color: #61dafa;
+  outline-color: #7e360d;
 }
 
 .TodoForm-buttonContainer {

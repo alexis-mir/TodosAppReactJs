@@ -4,8 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 36px;
   margin-top: 24px;
-  box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.15);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.15s;
+}
+
+.TodoItem:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
 }
 
 .TodoItem-p {
@@ -14,7 +20,10 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  color: #3d3d3d;
 }
+
 .TodoItem-p-complete {
   text-decoration: line-through;
+  color: #a0a0a0;
 }
