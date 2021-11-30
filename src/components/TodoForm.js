@@ -14,7 +14,7 @@ function TodoForm(props) {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    if(newTodoValue){
+    if (newTodoValue) {
       addTodo(newTodoValue);
     }
     setOpenModal(false);
@@ -22,7 +22,7 @@ function TodoForm(props) {
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Nuevo TODO</label>
+      <label>Nueva tarea</label>
       <textarea
         value={newTodoValue}
         onChange={onChange}
